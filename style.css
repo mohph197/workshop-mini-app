@@ -6,13 +6,14 @@
     --background: white;
     --text: #023047;
 }
-/* body.darkmode {
+body.dark-mode {
     --background: #2b2d42;
     --text: white;
-} */
+}
 body {
     background-color: var(--background);
     font-family: Raleway;
+    overflow-x: hidden;
 }
 nav {
     position: fixed;
@@ -55,7 +56,7 @@ nav a {
     margin: 0 50px;
 }
 #dark-mode-toggle * {    
-    transition-duration: .5s;
+    transition-duration: .7s;
 }
 #first-square {
     position: absolute;
@@ -83,8 +84,8 @@ nav a {
 }
 #inner-circle {
     position: relative;
-    left: 0;
-    height: 80%;
+    left: -30%;
+    height: 90%;
     width: 80%;
     border-radius: 50%;
     background-color: var(--text);
@@ -92,9 +93,9 @@ nav a {
 #dark-mode-toggle:hover {
     cursor: pointer;
 }
-#inner-circle.darkmode {
-    left: -30%;
-    height: 90%;
+body.dark-mode #inner-circle {
+    left: 0;
+    height: 80%;
 }
 #hero {
     height: 100vh;
@@ -133,12 +134,29 @@ nav a {
     box-shadow: 5px 5px 10px black;
     backdrop-filter: blur(10px);
     margin: 100px 0;
+    transition-duration: .5s;
 }
-.my-card.right {
+.card-container.left {
     align-self: flex-start;
 }
-.my-card.left{
+.card-container.right {
     align-self: flex-end;
+}
+.card-container.left .my-card{
+    left: 100vw;
+    opacity: 0;
+}
+.card-container.right .my-card{
+    right: 100vw;
+    opacity: 0;
+}
+.card-conatiner.left .my-card.fade-in {
+    left: 0;
+    opacity: 1;
+}
+.card-container.right .my-card.fade-in{
+    right: 0;
+    opacity: 1;
 }
 .my-contrast {
     position: absolute;
@@ -159,5 +177,5 @@ nav a {
     text-align: left;
     /* text-justify: inter-word; */
     font-size: 16pt;
-    color: var(--text);
+    color: white;
 }
