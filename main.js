@@ -38,6 +38,8 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) entry.target.firstElementChild.classList.add('fade-in');
         else entry.target.firstElementChild.classList.remove('fade-in');
     });
+}, {
+    threshold: .2,
 });
 
 [...cardContainers].forEach(cardContainer => observer.observe(cardContainer));

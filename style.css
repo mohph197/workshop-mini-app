@@ -10,6 +10,9 @@ body.dark-mode {
     --background: #2b2d42;
     --text: white;
 }
+body * {
+    transition-duration: .7s;
+}
 body {
     background-color: var(--background);
     font-family: Raleway;
@@ -55,9 +58,6 @@ nav a {
     width: 30px;
     margin: 0 50px;
 }
-#dark-mode-toggle * {    
-    transition-duration: .7s;
-}
 #first-square {
     position: absolute;
     width: 75%;
@@ -80,13 +80,14 @@ nav a {
     width: 60%;
     height: 60%;
     border-radius: 50%;
-    border: none;
+    overflow: hidden;
 }
 #inner-circle {
     position: relative;
-    left: -30%;
+    left: -20%;
+    top: -15%;
     height: 90%;
-    width: 80%;
+    width: 90%;
     border-radius: 50%;
     background-color: var(--text);
 }
@@ -94,8 +95,9 @@ nav a {
     cursor: pointer;
 }
 body.dark-mode #inner-circle {
-    left: 0;
-    height: 80%;
+   inset: 0;
+    height: 75%;
+    width: 75%;
 }
 #hero {
     height: 100vh;
@@ -134,7 +136,6 @@ body.dark-mode #inner-circle {
     box-shadow: 5px 5px 10px black;
     backdrop-filter: blur(10px);
     margin: 100px 0;
-    transition-duration: .5s;
 }
 .card-container.left {
     align-self: flex-start;
@@ -143,19 +144,19 @@ body.dark-mode #inner-circle {
     align-self: flex-end;
 }
 .card-container.left .my-card{
-    left: 100vw;
+    right: 100%;
     opacity: 0;
 }
 .card-container.right .my-card{
-    right: 100vw;
+    left: 100%;
     opacity: 0;
 }
 .card-container.left .my-card.fade-in {
-    left: 0;
+    right: 0;
     opacity: 1;
 }
 .card-container.right .my-card.fade-in {
-    right: 0;
+    left: 0;
     opacity: 1;
 }
 .my-contrast {
