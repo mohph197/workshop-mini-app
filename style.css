@@ -150,11 +150,11 @@ body.dark-mode #inner-circle {
     right: 100vw;
     opacity: 0;
 }
-.card-conatiner.left .my-card.fade-in {
+.card-container.left .my-card.fade-in {
     left: 0;
     opacity: 1;
 }
-.card-container.right .my-card.fade-in{
+.card-container.right .my-card.fade-in {
     right: 0;
     opacity: 1;
 }
