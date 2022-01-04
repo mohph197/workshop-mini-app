@@ -14,6 +14,10 @@ body {
     background-color: var(--background);
     font-family: Raleway;
 }
+nav svg g{
+    fill:var(--text);
+   
+}
 nav {
     position: fixed;
     z-index: 100;
@@ -31,9 +35,11 @@ nav a {
     text-decoration: none;
     color: var(--text);
 }
+
 #brand {
     font-size: 22pt;
     font-weight: bold;
+    margin-left: 45px;
 }
 #nav-menu {
     display: flex;
