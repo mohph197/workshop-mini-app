@@ -143,7 +143,6 @@ body.dark-mode #inner-circle {
     backdrop-filter: blur(10px);
     margin: 100px 0;
 }
-<<<<<<< HEAD
 .card-container.left {
     align-self: flex-start;
 }
@@ -166,8 +165,6 @@ body.dark-mode #inner-circle {
     left: 0;
     opacity: 1;
 }
-=======
->>>>>>> 3a32c627b10487e2743a604b6abb50ea3067fb1d
 .my-contrast {
     position: absolute;
     inset: 0;
